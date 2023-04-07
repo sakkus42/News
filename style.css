@@ -1,0 +1,314 @@
+*{
+	margin: 0;padding: 0;
+	list-style: none;
+	text-decoration: none;
+	box-sizing: border-box;
+	font-family: 'Inter', sans-serif;
+}
+
+html{
+	font-size: 10px;
+}
+
+/* bottom news */
+
+.bottomNews{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	justify-items: center;
+	width: 77%;
+	margin: 9rem auto;
+}
+
+.container{
+	display: flex;
+	flex-direction: row;
+}
+
+.container img{
+	width: 80%;
+}
+.container h1{
+	font-size: 2.2rem;
+    color: hsl(233, 8%, 79%);
+    font-weight: 900;
+	margin-bottom: 1rem;
+
+}
+
+.container a{
+	font-size: 1.7rem;
+	color: hsl(240, 100%, 5%);
+	font-weight: 700;
+	margin: 20px 0px;
+}
+
+.container a:hover{
+	color: hsl(5, 85%, 63%);	
+
+}
+
+.container p{
+	font-size: 1.5rem;
+	font-weight: 500;
+	color: hsl(236, 13%, 42%);
+	margin-top: 1.5rem;
+}
+
+/* rigt news */
+
+#rightNews{
+	display: flex;
+	flex-direction: column;
+	background-color:  hsl(240, 100%, 5%);
+	margin-left: 2rem;
+	width: 40%;
+	padding: 2rem;
+}
+
+#aside_a{
+	font-size: 3.5rem;
+	color: hsl(35, 77%, 62%);
+	font-weight: 900;
+}
+
+aside{
+	display: flex;
+	flex-direction: column;
+	margin: 3rem 0;
+	border-bottom: solid 2px hsl(236, 13%, 42%);
+}
+
+aside a{
+	color: #fff;
+	font-size: 1.4rem;
+	font-weight: 600;
+	margin-bottom: 1.75rem;
+}
+
+aside a:hover{
+	color: hsl(35, 77%, 62%);
+}
+
+aside p{
+	color: hsl(36, 100%, 99%);
+	font-weight: 500;
+	line-height: 1.5;
+	font-size: 1.5rem;
+	margin-bottom: 1.5rem;
+	
+}
+
+/*news kısmı*/
+
+#news{
+	margin: 9rem auto 0;
+	display: flex;
+	width: 77%;
+}
+
+/* leftnews */
+#leftNews{
+	width: 70%;
+}
+
+#leftNews img{
+	width: 100%;
+	height: auto;
+	margin-bottom: 5rem;
+}
+
+#leftNews div{
+	display: flex;
+	justify-content: space-between;
+}
+
+#leftNews h1{
+	font-weight: 800;
+	width: 23rem;
+	font-size: 4rem;
+}
+
+#leftNews p{
+	color: hsl(236, 13%, 42%);
+	font-size: 1.5rem;
+	font-weight: 400;
+	width: 30rem;
+	line-height: 1.5;
+}
+
+#leftNews button{
+	margin-top: 3rem;
+	width: 17rem;
+	height: 4rem;
+	background-color: hsl(5, 85%, 63%);
+	border: none;
+	color: #fff;
+	font-weight: 800;
+}
+
+#leftNews button:hover{
+	background-color: hsl(240, 100%, 5%);
+	color: hsl(36, 100%, 99%);
+}
+
+
+/* topbar kısmı */
+#topbar{
+	width: 77%;
+	height: auto;
+    margin: 9rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#topbar ul{
+	width: 100%;
+	display: flex;
+	justify-content:center;
+}
+
+#topbar ul li{
+	margin-right: 3rem;
+}
+
+#topbar ul li a{
+	color: hsl(236, 13%, 42%);
+	font-size: 1.8rem;
+	font-weight: 600;
+}
+
+#topbar ul li a:hover{
+	color: hsl(5, 85%, 63%);	
+}
+
+.menu-icon,
+.close{
+	display: none;
+}
+
+@media (max-width:450px){
+	#leftNews div{
+		display: flex !important;
+		flex-direction: column !important;
+	}
+	#leftNews div h1{
+		width: 100%;
+	}
+	#leftNews div p{
+		width: 100%;
+	}
+}
+
+@media (max-width:700px){
+	html{
+		font-size: 10px;
+	}
+	body{
+		padding: 2.5rem;
+	}
+	#topbar{
+		margin: 0;
+		padding: 0;
+		width: 100%;
+	}
+	#topbar ul{
+		flex-direction: column;
+		background-color: hsl(56, 100%, 99%);
+		height: 100vh;
+		width: 50vw;
+		position: fixed;
+		top: 0;	
+		right: 0;
+		display: none;
+	}
+	#topbar ul li{
+		margin: 3rem;
+	}
+	.close{
+		display: block;
+		width: 10%;
+		position: relative;
+		left: 60%;
+	}
+	#news{
+		width: 100%;
+		margin: 3rem auto;
+		padding: 0;
+		flex-direction: column;
+	}
+	#leftNews{
+		width: 100%;
+	}
+	#leftNews h1{
+		width: 50%;
+		margin-right: 5rem;
+	}
+	#leftNews p{
+		width: 50%;
+	}
+	#rightNews{
+		align-items: left;
+		width: 100%;
+		height: auto;
+		margin: 3rem auto;
+	}
+	#aside_a{
+		width: 100%;
+		text-align: center;
+	}
+	.menu-icon{
+		display: block;
+	}
+	.bottomNews{
+		margin: 0;
+		grid-template-columns: 1fr;
+		justify-items: left;
+		width: 100%;
+	}
+}
+
+@media (min-width:701px) and (max-width:1280px){
+	#news{
+		flex-direction: column;
+		align-items: center;
+	}
+	#leftNews{
+		width: 100%;
+	}
+	#leftNews h1{
+		width: 50%;
+		margin-right: 5rem;
+	}
+	#leftNews p{
+		width: 50%;
+	}
+	#rightNews{
+		align-items: center;
+		width: 100%;
+		margin-top: 5rem;
+		height: auto;
+	}
+	#rightNews div{
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+	}
+	aside{
+		border-bottom: none;
+		margin: 2rem;
+		padding-right: 1rem;
+		width: 100%;
+		justify-content: center;
+	}
+	aside:nth-of-type(1), aside:nth-of-type(2){
+		border-right: solid 2px hsl(236, 13%, 42%);
+	}
+	.bottomNews{
+		width: 75%;
+	}
+	.container img{
+		width: 90%;
+	}
+}
